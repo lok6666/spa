@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-2.2.2.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <!--<script src="js/rem.js"></script>-->
+	</head>
+	<style type="text/css">
+
+    .d2-1{
+        
+    	float: right;
+    	
+    }
+	</style>
+	<body>
+		
+			<div data-role='page'  id="d2">
+										
+				<div data-role='header' style="background: white;">
+					<img src="images/Z)(06GO$V6L89ELPAUEMXDK_03.jpg" alt="" />
+				
+				</div>	
+						
+				<div data-role='content'>
+					<div>
+						<h1>欢迎注册QQ</h1>
+						<h3>每一天，乐在沟通</h3>
+						<div class="d2-1">
+							<a href="">免费靓号</a>
+						</div>
+					</div>
+					<form >
+						<input type="text"  placeholder='用户名' class="d1" id="dd"/>
+						<input type="text"  placeholder='密码' class="d1" id="dd1"/>
+						<div data-role='filedcontain'>
+								<label for="selecet-choice-1" class="select"></label>
+								<select data-native-menu='false'>
+									<option value="">+86</option>
+								</select>
+						</div>
+					<input type="text"  placeholder='手机号码' class="d1"/>
+					<button class='ui-btn' class="d1" id="dd2">立即注册</button>
+					</form>
+				</div>
+					<div data-role='footer'>
+						
+					</div>
+			</div>		
+	</body>
+	<script type="text/javascript">
+		$('#dd2').click(function(){
+			var dd=$('#dd').val();
+			var dd1=$('#dd1').val();
+			$.ajax(
+			{
+				type:'get',
+				url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+				data:{status:'register',userID:dd,password:dd1},
+				success:function(data1){
+					console.log(data1);
+					if(data1==0)
+					{
+						alert('已被注册');
+					}
+					if(data1==1)
+					{
+						$(location).attr('href','new_file2.html');
+					}
+					if(data1==2){
+						alert('error!');
+					}
+				}
+			}
+		);
+		})
+		
+	</script>
+</html>
