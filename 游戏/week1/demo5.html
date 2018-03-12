@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>circle</title>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500" style="border:solid #ccc 2px">
+        Your browser does not support the HTML 5 Canvas.
+    </canvas>
+    <script>
+        window.onload=function(){
+            canvasapp();
+        }
+        function canvasapp(){
+            var canvas=document.getElementById('canvas');
+            canvas.height=500;
+            canvas.width=500;
+            var context=canvas.getContext('2d');
+            var grd=context.createLinearGradient(50, 50, 100, 100);
+            grd.addColorStop(0, 'rgb(255,0,0)');
+            grd.addColorStop(0.5, 'rgb(0,255,0)');
+            grd.addColorStop(1, 'rgb(255,0,0)');
+            context.fillStyle=grd;
+            context.arc(50, 50, 50, 0,Math.PI*0.5,false);
+            context.stroke();
+            // context.beginPath();
+            context.arc(50, 50, 50, 0,Math.PI*0.5,true);
+            context.stroke();
+            context.fill();
+        }
+
+    </script>
+</body>
+</html>
