@@ -1,0 +1,19 @@
+<div id="content">
+    <h2>正在进行<span>{{todolist.length}}</span></h2>
+    <ul>
+      <li *ngFor="let item of todolist;let idx = index;">
+        <input type="checkbox" (change)="change(idx)">
+        <span>{{item}}</span>
+        <button (click)="delData(idx)">-</button>
+      </li>
+    </ul>
+      
+    <h2>已经完成<span>{{donelist.length}}</span></h2>
+    <ul>
+      <li class="done" draggable="true" *ngFor="let item of donelist;let idx = index;">
+        <input type="checkbox" checked (change)="change2(idx)">
+        <span>{{item}}</span>
+        <button (click)="delData2(idx)">-</button>
+      </li>
+    </ul>
+</div>

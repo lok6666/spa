@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: #CDCDCD;
+}
+#inside,#content{
+    width: 600px;
+    margin: 0 auto;
+}
+#header{
+    height: 50px;
+    background:rgba(47,47,47,0.98);
+}
+#inside>span{
+    /* float: left; */
+    font-size: 24px;
+    color:#ddd;
+    height: 50px;
+    line-height: 50px;
+}
+#inside>input{
+    float: right;
+    margin-top: 12px;
+    height:24px;
+    width: 60%;
+    padding: 1px 6px;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.24), 
+    0 1px 6px rgba(0,0,0,0.45) inset;
+    outline: none;
+}
+h2>span{
+    float: right;
+    height: 22px;
+    width: 20px;
+    border-radius: 20px;
+    background: #E6E6FA;
+    line-height: 22px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin: 5px 8px;
+}
+h2{
+    margin: 20px 0;
+}
+li{
+    list-style: none;
+    height: 32px;
+    line-height: 32px;
+    background: #fff;
+    /* position: relative; */
+    /* margin-bottom: 10px; */
+    /* padding: 0 5px; */
+    clear: both;
+    border-radius: 3px;
+    border-left: 5px solid #629A9C;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    background-color: white;
+    margin-bottom: 10px;
+}
+li>input{
+    /* position: relative; */
+    float: left;
+    margin: 5px 13px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+li>button{
+    float: right;
+    margin: 5px 10px;
+    width: 26px;
+    height: 24px;
+    border-radius: 14px;
+    border: 6px double #FFF;
+    background: #CCC;
+    line-height: 14px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.done{
+    border-left: 5px solid #999;
+    opacity: 0.5;
+}
+footer {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    width: 600px;
+    margin: 15px auto;
+}
