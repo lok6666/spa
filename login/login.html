@@ -1,0 +1,19 @@
+<ion-content padding> 
+    
+    <ion-icon ios="ios-arrow-back" style=" float:left;" ></ion-icon> 
+    <div style=" float:right;">帮助</div>
+    <ion-list>
+        <p class="logo"><img src="../assets/imgs/淘宝.png"/></p>
+          <ion-item >
+            <ion-input [(ngModel)]="username"    type="text" placeholder="请输入淘宝账户" ></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-input  [(ngModel)]="password"   type="password" placeholder="请输入密码"></ion-input>
+          </ion-item>
+
+          <button ion-button full round class="login" (click)="req()">登录</button>   
+          <div style=" float:left;">短信验证码登录</div>
+          <div style=" float:right;">注册</div> 
+  </ion-list>
+</ion-content> 
