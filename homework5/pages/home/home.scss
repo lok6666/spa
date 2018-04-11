@@ -1,0 +1,27 @@
+page-home {
+    .slide{
+        height: auto;
+    }
+    .logo{
+        margin-left: 25%;
+    }
+    .search{
+        margin-top: 14px;
+        float:right;
+ 
+    }
+    .slideBar{
+        height: 50px;
+        white-space: nowrap;
+    }
+    .slideBar span{
+        font-size: 30px;
+        padding: 0 10px;
+    }
+    .service div{
+        border: 1px solid #ebebeb;
+        float: left;
+        margin-left: 20px;
+    }
+}
+
