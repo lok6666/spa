@@ -1,0 +1,45 @@
+page-about {
+
+}
+.abDiv{
+    width: 100%;
+    padding-left: 8px;
+    padding-top: 5px;
+    border-bottom: #eeeeee solid 0.5px;
+}
+.abDiv span{
+    color: grey;
+}
+.abDiv ion-icon{
+    margin-left: 70px;
+}
+.abInput{
+    display: inline-block;
+    width:50%;
+    margin-left: 50px;
+}
+.abTitle{
+    background-color: #f9f9f9;
+    padding-top: 10px;
+    padding-left: 8px;
+    height: 8%;
+    width: 100%;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 0px;
+}
+.abArea{
+    border:#eeeeee solid 1px;
+    width: 100%;
+    margin-top: 0px
+}
+.abImg{
+    margin-top: 5px;
+    border-bottom: #f9f9f9 solid 15px;
+}
+.abImg img{
+    width: 21px;
+    height: 21px;
+    margin-left:8px; 
+
+}

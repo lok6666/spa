@@ -1,0 +1,35 @@
+<!-- Generated template for the InfosComponent component -->
+<ion-list-header>
+    最近消息
+  </ion-list-header>
+<ion-item-sliding >
+  <ion-item *ngFor="let con of conversation;let i=index">
+    <ion-avatar item-start>
+      <img src="{{con.url}}">
+    </ion-avatar>
+    <h2>{{con.name}}</h2>
+    <p>{{con.content}}</p>
+    <button ion-button clear item-end (click)="goDetail(i)" style="color: gray">{{con.time}}</button>
+  </ion-item>
+</ion-item-sliding>
+<ion-list-header>
+   三天前消息
+</ion-list-header>
+<ion-item-sliding>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/images/issue01.png">
+      </ion-avatar>
+      <h2>孙老师</h2>
+      <p>您好...</p>
+    </ion-item>
+</ion-item-sliding>
+<ion-item-sliding>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/images/issue02.png">
+      </ion-avatar>
+      <h2>周昂永</h2>
+      <p>东西没有拿到</p>
+    </ion-item>
+</ion-item-sliding>

@@ -1,0 +1,130 @@
+<ion-header no-border>
+  <ion-navbar color="yellow">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>资芽</ion-title>
+    <ion-buttons end>
+        <ion-icon name="search" style="margin-right:8px;"></ion-icon>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides loop="true" pager="true" autoplay="3000" class="slides">
+    <ion-slide>
+      <img src="../../assets/imgs/images/5首页展示_03.png" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/imgs/images/5首页展示_03.png" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/imgs/images/5首页展示_03.png" alt="">
+    </ion-slide>
+  </ion-slides>
+  
+  <div>
+    <ion-segment [(ngModel)]="icons" color="yellow">
+      
+          <ion-segment-button value="information">
+              找信息
+            </ion-segment-button>
+      
+    
+            <ion-segment-button value="service">
+                找服务
+              </ion-segment-button>
+
+        
+      </ion-segment>
+  </div>
+  <div [ngSwitch]="icons" class="icons">
+      <ion-grid *ngSwitchCase="'information'" >
+          <ion-row>
+            <ion-col>
+              <img src="../../assets/imgs/images/icon01.png">
+              <p>资产包转让</p>
+            </ion-col>
+            <ion-col>
+              <img src="../../assets/imgs/images/icon02.png">
+              <p>债券转让</p>
+            </ion-col>
+            <ion-col>
+              <img src="../../assets/imgs/images/icon03.png">
+              <p>固产转让</p>
+              </ion-col>
+              <ion-col>
+              <img src="../../assets/imgs/images/icon04.png">
+              <p>商业保理</p> 
+              </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+               <img src="../../assets/imgs/images/icon05.png">
+               <p>典当担保</p>
+            </ion-col>
+            <ion-col>
+              <img src="../../assets/imgs/images/icon06.png">
+              <p>融资借贷</p> 
+            </ion-col>
+            <ion-col>
+              <img src="../../assets/imgs/images/icon07.png">
+              <p>悬赏信息</p>
+            </ion-col>
+            <ion-col>
+              <img src="../../assets/imgs/images/icon08.png">
+              <p>尽职调查</p> 
+            </ion-col>
+          </ion-row>
+          <div class="iconsub">
+            <img src="../../assets/imgs/images/info-icon.png">
+            <span >优质信息</span>
+          </div>
+          <!-- 列表组件 -->
+          <list [items]="items"></list>
+        </ion-grid>
+        <ion-grid *ngSwitchCase="'service'">
+            <ion-row>
+              <ion-col>
+                <img src="../../assets/imgs/images/icon09.png">
+               <p>资产包收购</p>
+              </ion-col>
+              <ion-col>
+                <img src="../../assets/imgs/images/icon10.png">
+                <p>催机收购</p> 
+              </ion-col>
+              <ion-col>
+                <img src="../../assets/imgs/images/icon11.png">
+                <p>律师事务所</p>   
+              </ion-col>
+              <ion-col>
+                <img src="../../assets/imgs/images/icon04.png">
+                <p>保理公司</p>   
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <img src="../../assets/imgs/images/icon08.png">
+                <p>资金过桥</p> 
+              </ion-col>
+              <ion-col>
+                <img src="../../assets/imgs/images/icon06.png">
+                <p>投资贷款</p> 
+              </ion-col>
+              <ion-col>
+                <img src="../../assets/imgs/images/icon03.png">
+                <p>固产收购</p>  
+              </ion-col>
+              <ion-col>
+                <img src="../../assets/imgs/images/icon08.png">
+                <p>尽职调查</p> 
+              </ion-col>
+            </ion-row>
+            <div class="iconsub">
+                <img src="../../assets/imgs/images/sevice-icon.png">
+                <span >精选服务</span>
+              </div>
+            <list [items]="items"></list>
+          </ion-grid>
+  </div>
+</ion-content>

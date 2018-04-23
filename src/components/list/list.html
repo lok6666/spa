@@ -1,0 +1,21 @@
+<!-- Generated template for the ListComponent component -->
+<div>
+    <ion-list no-lines class="lists">
+        <ion-item *ngFor="let item of items;let i=index;">
+          <ion-thumbnail item-start>
+            <img src="{{item.url}}" style="width:55px;height:51.5px;">
+          </ion-thumbnail>
+          <p >地区：<span>{{item.region}}</span></p>
+          <p >来源：<span>{{item.sorce}}</span></p>
+          <p >类型：<span>{{item.type}}</span></p>
+          <div style="float: right;margin-right:20px;margin-top:-60px;">
+            <p style="color:#c01444;font-size:25px;">{{item.price}}</p>
+            <p >总金额</p>
+          </div>
+          <button ion-button clear item-end><ion-icon name="arrow-forward" style="color:black;font-size:23px;"></ion-icon></button>
+        </ion-item>
+      </ion-list>
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+</div>
